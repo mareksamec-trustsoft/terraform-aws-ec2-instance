@@ -242,6 +242,10 @@ resource "aws_instance" "this" {
       delete = timeouts.value.delete
     }
   }
+lifecycle {
+    ignore_changes = [
+      ebs_block_device,
+    ]
 }
 
 ################################################################################
