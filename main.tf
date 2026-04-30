@@ -245,6 +245,7 @@ resource "aws_instance" "this" {
 lifecycle {
     ignore_changes = [
       tags,
+      tags_all,
       ebs_block_device,
     ]
  }
@@ -464,6 +465,7 @@ resource "aws_instance" "ignore_ami" {
       ami,
       ebs_block_device,
       tags,
+      tags_all,
     ]
   }
 }
